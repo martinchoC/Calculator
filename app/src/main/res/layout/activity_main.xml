@@ -246,7 +246,7 @@
             android:layout_height="30pt"
             android:layout_weight="1"
             android:background="@color/orangeOperations"
-            android:onClick="buttonOperationEvent"
+            android:onClick="buttonEqualsEvent"
             android:text="="
             android:textColor="@color/operationstextColor"
             android:textSize="18sp" />

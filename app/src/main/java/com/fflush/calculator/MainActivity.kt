@@ -89,4 +89,26 @@ class MainActivity : AppCompatActivity() {
         oldNumber = showNumbersText.text.toString()
         isNewOperation = true
     }
+
+    fun buttonEqualsEvent(view: View){
+        val newNumber = showNumbersText.text.toString()
+        var finalNumber: Double?= null
+        when(op){
+            "*" -> {
+                finalNumber = oldNumber.toDouble() * newNumber.toDouble()
+            }
+            "/" -> {
+                finalNumber = oldNumber.toDouble() / newNumber.toDouble()
+
+            }
+            "+" -> {
+                finalNumber = oldNumber.toDouble() + newNumber.toDouble()
+            }
+            "-" -> {
+                finalNumber = oldNumber.toDouble() - newNumber.toDouble()
+            }
+        }
+        showNumbersText.setText(finalNumber.toString())
+        isNewOperation = true
+    }
 }

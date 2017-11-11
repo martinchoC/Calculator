@@ -5,15 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10pt"
     tools:context="com.fflush.calculator.MainActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/showNumbersText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"/>
+        android:layout_height="30pt"
+        android:layout_weight="1"
+        android:background="@color/textBackground"
+        android:focusableInTouchMode="false"
+        android:gravity="right"
+        android:inputType="number"
+        android:paddingTop="30pt"
+        android:textAlignment="viewEnd"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/operationstextColor"
+        android:textSize="25sp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -22,31 +29,97 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:weightSum="4">
 
             <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AC" />
+                android:id="@+id/buttonAC"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="AC"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+/-" />
+                android:id="@+id/buttonPosNeg"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="+/-"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%" />
+                android:id="@+id/buttonPercentage"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+
+                android:onClick="buttonNumberEvent"
+                android:text="%"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/" />
+                android:id="@+id/buttonDiv"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orangeOperations"
+                android:onClick="buttonOperationEvent"
+                android:text="/"
+                android:textColor="@color/operationstextColor"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/buttonNumber7"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="7"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonNumber8"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="8"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonNumber9"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="9"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonProd"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orangeOperations"
+                android:onClick="buttonOperationEvent"
+                android:text="*"
+                android:textColor="@color/operationstextColor"
+                android:textSize="18sp" />
         </TableRow>
 
         <TableRow
@@ -54,28 +127,45 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7" />
+                android:id="@+id/buttonNumber4"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="4"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8" />
+                android:id="@+id/buttonNumber5"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="5"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9" />
+                android:id="@+id/buttonNumber6"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="6"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*" />
+                android:id="@+id/buttonMin"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orangeOperations"
+                android:onClick="buttonOperationEvent"
+                android:text="-"
+                android:textColor="@color/operationstextColor"
+                android:textSize="18sp" />
         </TableRow>
 
         <TableRow
@@ -83,57 +173,45 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4" />
+                android:id="@+id/buttonNumber1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="1"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5" />
+                android:id="@+id/buttonNumber2"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="2"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6" />
+                android:id="@+id/buttonNumber3"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/buttonBackground"
+                android:onClick="buttonNumberEvent"
+                android:text="3"
+                android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+" />
+                android:id="@+id/buttonSum"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orangeOperations"
+                android:onClick="buttonOperationEvent"
+                android:text="+"
+                android:textColor="@color/operationstextColor"
+                android:textSize="18sp" />
         </TableRow>
     </TableLayout>
 
@@ -143,25 +221,34 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="196dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.50"
-            android:text="0" />
+            android:id="@+id/buttonNumber0"
+            android:layout_width="60pt"
+            android:layout_height="30pt"
+            android:layout_weight="2"
+            android:background="@color/buttonBackground"
+            android:onClick="buttonNumberEvent"
+            android:text="0"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="99dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:text="." />
+            android:id="@+id/buttonDot"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:background="@color/buttonBackground"
+            android:onClick="buttonNumberEvent"
+            android:text="."
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25
-"
-            android:text="=" />
+            android:id="@+id/buttonEquals"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_weight="1"
+            android:background="@color/orangeOperations"
+            android:onClick="buttonOperationEvent"
+            android:text="="
+            android:textColor="@color/operationstextColor"
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>

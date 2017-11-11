@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="textBackground">#6B6B6D</color>
+    <color name="buttonBackground">#D6D6D6</color>
+    <color name="orangeOperations">#F79231</color>
+    <color name="operationstextColor">#FFFFFF</color>
 </resources>

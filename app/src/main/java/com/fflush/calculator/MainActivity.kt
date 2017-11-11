@@ -111,4 +111,15 @@ class MainActivity : AppCompatActivity() {
         showNumbersText.setText(finalNumber.toString())
         isNewOperation = true
     }
+
+    fun buttonPercentEvent(view: View){
+        val number = showNumbersText.text.toString().toDouble()/100
+        showNumbersText.setText(number.toString())
+        isNewOperation = true
+    }
+
+    fun buttonCleanEvent(view: View){
+        showNumbersText.setText("0")
+        isNewOperation = true
+    }
 }

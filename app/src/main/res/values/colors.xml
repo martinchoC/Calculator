@@ -7,4 +7,5 @@
     <color name="buttonBackground">#D6D6D6</color>
     <color name="orangeOperations">#F79231</color>
     <color name="operationstextColor">#FFFFFF</color>
+    <color name="backgroundColor">#000000</color>
 </resources>
